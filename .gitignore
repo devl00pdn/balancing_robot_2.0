@@ -1,0 +1,6 @@
+cmake-build-debug/
+balancing_robot.xml
+.cproject
+.mxproject
+.project
+CMakeLists_template.txt
