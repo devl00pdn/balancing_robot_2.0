@@ -2,9 +2,8 @@
  * packet_from_uav.h
  */
 
-#ifndef TELEMETRY_PACKET_FROM_UAV_H_
-#define TELEMETRY_PACKET_FROM_UAV_H_
-
+#ifndef TELEMETRY_PACKET_FROM_SERVER_H_
+#define TELEMETRY_PACKET_FROM_SERVER_H_
 #include <algorithm>
 #include "data_for_logs.h"
 #include "param_type.h"
@@ -12,7 +11,6 @@
 
 namespace telemetry {
 
-// Пакеты от UAV
 struct base_uav_packet : public base_packet {
 	base_uav_packet (const COMMAND& packet_cmd) :
 		base_packet(packet_cmd),
@@ -93,4 +91,4 @@ static constexpr uint32_t MAX_UAV_PACKET_LENGTH = std::max({sizeof(Count_of_fram
 
 }
 
-#endif /* TELEMETRY_PACKET_FROM_UAV_H_ */
+#endif /* TELEMETRY_PACKET_FROM_UAV_H_*/

@@ -2,8 +2,8 @@
  * packet_from_scat.h
  */
 
-#ifndef TELEMETRY_PACKET_FROM_SCAT_H_
-#define TELEMETRY_PACKET_FROM_SCAT_H_
+#ifndef TELEMETRY_PACKET_FROM_CLIENT_H_
+#define TELEMETRY_PACKET_FROM_CLIENT_H_
 
 #include "data_for_logs.h"
 #include  <algorithm>
@@ -11,7 +11,6 @@
 
 namespace telemetry {
 
-// Пакеты от SCAT
 struct Heartbeat : public base_packet {
     // Конструктор по умолчанию
 	Heartbeat() :
@@ -81,4 +80,4 @@ static constexpr uint32_t MAX_SCAT_PACKET_LENGTH =
 
 }
 
-#endif /* TELEMETRY_PACKET_FROM_SCAT_H_ */
+#endif /* _TELEMETRY_PACKET_FROM_SCAT_H_ */
