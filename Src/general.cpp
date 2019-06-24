@@ -4,18 +4,21 @@
 
 #include "general.h"
 #include <string>
+#include "cobs_ex.h"
+#include "commander.h"
 
-
-class Foo{
-public:
-    void set(){
-        i = 20;
-    }
-    int i = 10;
-    std::string name = "main";
-};
+Commander commander;
 
 void global_initialize_cpp(){
-   Foo templ_obj;
-   templ_obj.set();
+    commander.init();
 }
+
+void usb_otg_receive_handler(uint8_t *buf, uint32_t len){
+    uint8_t decoded_msg[1024] = {0};
+    int result = cobs_ex::cobs_decode(buf, len, decoded_msg);
+    if(!result)
+        return;
+
+    commander.handle(buf, len);
+}
+

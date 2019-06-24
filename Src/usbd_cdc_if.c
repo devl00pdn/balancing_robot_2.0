@@ -18,7 +18,7 @@
   ******************************************************************************
   */
 #include "stm32f4xx_hal.h"
-
+#include "general.h"
 /* USER CODE END Header */
 
 /* Includes ------------------------------------------------------------------*/
@@ -268,6 +268,8 @@ static int8_t CDC_Receive_FS(uint8_t* Buf, uint32_t *Len)
   if(Len > 0 && Buf[0] != '\r'){
       HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_9);
   }
+
+  usb_otg_receive_handler(Buf, *Len);
   USBD_CDC_SetRxBuffer(&hUsbDeviceFS, &Buf[0]);
   USBD_CDC_ReceivePacket(&hUsbDeviceFS);
   return (USBD_OK);

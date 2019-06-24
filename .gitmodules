@@ -1,0 +1,3 @@
+[submodule "cobs_ex"]
+	path = cobs_ex
+	url = git@github.com:devl00pdn/cobs_ex.git
