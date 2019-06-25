@@ -5,7 +5,6 @@
 #ifndef TELEMETRY_PACKET_FROM_SERVER_H_
 #define TELEMETRY_PACKET_FROM_SERVER_H_
 #include <algorithm>
-#include "data_for_logs.h"
 #include "param_type.h"
 #include "telemetry_packets.h"
 
@@ -34,14 +33,14 @@ struct Frame_packet : public base_uav_packet {
 	Frame_packet () :
 		base_uav_packet(COMMAND::FRAME),
 		frame_seq(0),
-		frame_id(pt_logs::ID_PACKET::EMPTY),
+		frame_id(0),
 		count_of_parameters(0),
 		size_of_data_frame(0),
 		frame_name{'\0'} {
 	}
 
 	uint8_t 			frame_seq;
-	pt_logs::ID_PACKET 	frame_id;
+	uint8_t         	frame_id;
 	uint16_t 			count_of_parameters;
 	uint16_t 			size_of_data_frame;
 	char 				frame_name[MAX_NAME_LENGTH];

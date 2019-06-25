@@ -5,7 +5,6 @@
 #ifndef TELEMETRY_PACKET_FROM_CLIENT_H_
 #define TELEMETRY_PACKET_FROM_CLIENT_H_
 
-#include "data_for_logs.h"
 #include  <algorithm>
 #include "telemetry_packets.h"
 
@@ -18,12 +17,12 @@ struct Heartbeat : public base_packet {
 		frame_id(0) {
     }
 
-    Heartbeat(uint16_t sys_id_, pt_logs::id_t frame_id_):
+    Heartbeat(uint16_t sys_id_, uint8_t frame_id_):
     	base_packet(COMMAND::HEARTBEAT, sys_id_),
 		frame_id(frame_id_) {
     }
 
-    pt_logs::id_t frame_id; // id кадра который мы слушаем
+    uint8_t frame_id; // id кадра который мы слушаем
 } __attribute__((packed));
 
 struct Request_count_of_frames_packet : public base_packet {
@@ -64,12 +63,12 @@ struct Disconnect_packet : public base_packet {
     }
 
 	// Конструктор с параметрами
-    Disconnect_packet(uint16_t sys_id_, pt_logs::id_t frame_id_):
+    Disconnect_packet(uint16_t sys_id_, uint8_t frame_id_):
 		base_packet(COMMAND::DISCONNECT, sys_id_),
 		frame_id(frame_id_) {
     }
 
-    pt_logs::id_t frame_id; // id кадра который мы слушаем
+    uint8_t frame_id; // id кадра который мы слушаем
 } __attribute__((packed));
 
 static constexpr uint32_t MAX_SCAT_PACKET_LENGTH =
