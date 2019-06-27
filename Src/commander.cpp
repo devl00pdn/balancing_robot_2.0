@@ -4,6 +4,8 @@
 
 #include <commander.h>
 #include "telemetry_packets.h"
+#include "buim_telemetry_frame_regulators.h"
+#include "buim_telemetry_frame_regulators_gatherer.h"
 
 // здесь должны быть файлы протокола телеметрии
 
