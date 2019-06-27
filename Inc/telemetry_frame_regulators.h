@@ -5,8 +5,8 @@
  *      Author: demid
  */
 
-#ifndef BUIM_TELEMETRY_FRAME_REGULATORS_H_
-#define BUIM_TELEMETRY_FRAME_REGULATORS_H_
+#ifndef TELEMETRY_FRAME_REGULATORS_H_
+#define TELEMETRY_FRAME_REGULATORS_H_
 
 #include "telemetry_frame_base.h"
 #include "stdint.h"
@@ -45,4 +45,4 @@ public:
 };
 
 
-#endif /* BUIM_TELEMETRY_FRAME_REGULATORS_H_ */
+#endif /* TELEMETRY_FRAME_REGULATORS_H_ */

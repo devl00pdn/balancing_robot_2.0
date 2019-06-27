@@ -64,12 +64,12 @@ Client   |														| Server
  */
 
 static constexpr uint16_t MAX_LISTENERS_COUNT			= 4; ///<
-static constexpr uint16_t MAX_NAME_LENGTH 				= 100; ///<
+static constexpr uint16_t MAX_NAME_LENGTH 				= 50; ///<
 static constexpr uint16_t MAX_DESC_LENGTH 				= 100; ///<
-static constexpr uint16_t MAX_MEASURE_LENGTH 			= 50; ///<
-static constexpr uint16_t RX_SKAT_COMMAND_PORT   		= 14557; ///< Порт для ответа на запросы от клиента
-static constexpr uint16_t RX_SKAT_TELEMETRY_PORT 		= 14556; ///< Порт для передачи потока телеметрии в клиента
-static constexpr uint16_t RX_UAV_PORT					= 14555; ///< Порт для передачи комманд и запросов на серер
+static constexpr uint16_t MAX_MEASURE_LENGTH 			= 20; ///<
+static constexpr uint16_t RX_CLIENT_COMMAND_PORT   		= 14557; ///< Порт для ответа на запросы от клиента
+static constexpr uint16_t RX_CLIENT_TELEMETRY_PORT 		= 14556; ///< Порт для передачи потока телеметрии в клиента
+static constexpr uint16_t RX_SERVER_PORT					= 14555; ///< Порт для передачи комманд и запросов на серер
 static constexpr uint32_t HEARTBEAT_FREQUENCY			= 1;
 static constexpr uint32_t SUBSCRIPTION_RELEVANCE_TIME	= 5; 	///< Время действия подписки (секунды)
 

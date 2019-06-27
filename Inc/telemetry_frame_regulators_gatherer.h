@@ -5,12 +5,12 @@
  *      Author: demid
  */
 
-#ifndef BUIM_TELEMETRY_FRAME_REGULATORS_GATHERER_H_
-#define BUIM_TELEMETRY_FRAME_REGULATORS_GATHERER_H_
+#ifndef TELEMETRY_FRAME_REGULATORS_GATHERER_H_
+#define TELEMETRY_FRAME_REGULATORS_GATHERER_H_
 
 #include <stdint.h>
 
-#include "buim_telemetry_frame_regulators.h"
+#include "telemetry_frame_regulators.h"
 
 #include "data_generator.h"
 #include "os_interface.h"
@@ -41,4 +41,4 @@ inline bool Regulator_frame::update() {
     return rv;
 }
 
-#endif /* BUIM_TELEMETRY_FRAME_REGULATORS_GATHERER_H_ */
+#endif /* TELEMETRY_FRAME_REGULATORS_GATHERER_H_ */
